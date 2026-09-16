@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a0e13" />
+  <meta name="description"
+    content="Kartika Cyber Hackathon 2026 — bangun solusi AI untuk pertahanan siber Indonesia bersama PUSSIBERAD dan CODEPOLITAN." />
+  <title>Kartika Cyber Hackathon 2026</title>
+  <link rel="icon" href="assets/emblem.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cousine:wght@400;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.2.1/dist/index.global.js"></script>
+  <style type="text/tailwindcss">
+    @theme {
+        --color-canvas: #0a0e13;
+        --color-panel: #10161d;
+        --color-line: #262f39;
+        --color-ink: #e9e6dd;
+        --color-muted: #8b94a0;
+        --color-accent: #f02c2c;
+        --color-gold: #f02c2c;
+        --font-sans: "IBM Plex Sans", sans-serif;
+        --font-display: "Space Grotesk", sans-serif;
+        --font-mono: "IBM Plex Mono", monospace;
+      }
+    </style>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="bg-canvas text-ink font-sans antialiased">
+  <a href="#tentang" class="skip-link">Lewati ke konten</a>
+  <main>
+    <section class="hero relative overflow-hidden" aria-labelledby="hero-title">
+      <img src="assets/hero-background.png" alt="Background" class="hero-backdrop" fetchpriority="high" width="1440"
+        height="732" />
+      <header class="site-header">
+        <div class="header-inner mx-auto flex items-center justify-between">
+          <a class="brand-emblem" href="#" aria-label="Kartika Cyber Hackathon — beranda"><img src="assets/emblem.png"
+              alt="Lambang Kartika Cyber Hackathon" fetchpriority="high" width="100" height="113" /></a>
+          <a class="brand" href="#">KARTIKA CYBER HACKATHON 2026</a>
+          <a class="button header-cta" href="https://kartikacyberhackathon.id" target="_blank"
+            rel="noopener noreferrer">DAFTAR SEKARANG<span aria-hidden="true">↗</span></a>
+        </div>
+      </header>
+      <div class="hero-content mx-auto">
+        <p class="hero-kicker text-white">
+          Memperingati Hari Juang Kartika 2026
+        </p>
+        <h1 id="hero-title">
+          <span class="hero-first">KARTIKA CYBER
+            <span class="hero-stars" aria-hidden="true">
+              <i class="fa-solid fa-asterisk"></i>
+              <i class="fa-solid fa-asterisk"></i>
+              <i class="fa-solid fa-asterisk"></i>
+              <i class="fa-solid fa-asterisk"></i>
+              <i class="fa-solid fa-asterisk"></i> </span></span><span class="hero-second">HACKATHON 2026</span>
+        </h1>
+        <img src="assets/hero-icons.png" alt="" class="hero-symbol" fetchpriority="high" width="204" height="89" />
+        <div class="hero-copy">
+          <p>
+            Bangun Solusi AI untuk Pertahanan Siber Indonesia.
+            <strong>Raih Hadiah Ratusan Juta dan Golden Ticket TNI AD.</strong>
+          </p>
+          <p>
+            Terbuka untuk developer, programmer, mahasiswa, dan praktisi
+            keamanan siber di seluruh Indonesia. <strong>Gratis.</strong>
+          </p>
+          <div class="hero-actions flex flex-wrap items-center gap-6">
+            <a class="button" href="https://kartikacyberhackathon.id" target="_blank" rel="noopener noreferrer">Daftar
+              Sekarang
+              <i class="fa-solid fa-arrow-right button-icon" aria-hidden="true"></i></a><a class="text-link"
+              href="#kategori">Lihat Kategori Solusi <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="organizer-bar">
+      <div class="container flex flex-wrap items-center justify-center gap-10">
+        <p>Diselenggarakan Oleh</p>
+        <div class="organizer-logos">
+          <img class="w-50 h-20 object-contain" src="assets/pussiberad-logo.png" alt="PUSSIBERAD" loading="lazy"
+            decoding="async" width="560" height="144" />
+          <img class="w-50 h-10 object-contain" src="assets/codepolitan-logo.png" alt="CODEPOLITAN" loading="lazy"
+            decoding="async" width="390" height="79" />
+        </div>
+      </div>
+    </div>
+    <section id="tentang" class="section about">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">// TENTANG PROGRAM</p>
+          <h2 class="max-w-3xl">
+            Bangun solusi AI, submit karya, raih hadiah sampai jalur TNI AD.
+          </h2>
+          <p class="intro">
+            Kamu tidak perlu latar belakang militer untuk ikut. Cukup bawa
+            kemampuan coding dan ide kamu. Kerjakan online selama 4 minggu,
+            lalu 10 tim terbaik presentasi langsung di Jakarta.
+          </p>
+        </div>
+        <div class="two-column grid md:grid-cols-2 gap-8 items-start">
+          <article class="benefit-card panel entry">
+            <div class="flex items-center justify-between">
+              <span class="tag">SEMUA PESERTA</span><i class="fa-solid fa-user-check benefit-icon"
+                aria-hidden="true"></i>
+            </div>
+            <h3>Benefit Setiap Peserta yang Submit</h3>
+            <ul class="checklist space-y-4">
+              <li>
+                <i class="fa-solid fa-circle-check check-icon" aria-hidden="true"></i>
+                <span>Sertifikat digital resmi dari CODEPOLITAN dan
+                  PUSSIBERAD.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check check-icon" aria-hidden="true"></i>
+                <span>Akses 2 webinar pembekalan teknis intensif gratis.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check check-icon" aria-hidden="true"></i>
+                <span>Karya berpotensi diadopsi dan dikembangkan oleh TNI
+                  AD.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check check-icon" aria-hidden="true"></i>
+                <span>Pengalaman nyata membangun solusi pertahanan siber
+                  kedaulatan negara.</span>
+              </li>
+            </ul>
+            <p class="terminal-label">[ BENEFIT LEVEL: ENTRY SUBMISSION ]</p>
+          </article>
+          <article class="benefit-card panel elite">
+            <div class="flex items-center justify-between">
+              <span class="tag">10 TIM FINALIS</span><i class="fa-solid fa-user-secret benefit-icon"
+                aria-hidden="true"></i>
+            </div>
+            <h3>Reward &amp; Privilege Finalis Jakarta</h3>
+            <ul class="checklist space-y-4">
+              <li>
+                <i class="fa-solid fa-circle-check check-icon" aria-hidden="true"></i>
+                <span>Hadiah tunai Rp 7,5 juta sampai Rp 20 juta.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check check-icon" aria-hidden="true"></i>
+                <span>Golden Ticket jalur rekomendasi Seleksi Bintara Siber TNI
+                  AD.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check check-icon" aria-hidden="true"></i>
+                <span>Membership CODEPOLITAN 1 tahun penuh (senilai Rp
+                  1.200.000).</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check check-icon" aria-hidden="true"></i>
+                <span>Seat Bootcamp Ethical Hacking JagoanSiber 8x live session
+                  (senilai Rp 1.200.000).</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check check-icon" aria-hidden="true"></i>
+                <span>Plakat dan piala kehormatan resmi PUSSIBERAD.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check check-icon" aria-hidden="true"></i>
+                <span>Presentasi di depan ratusan hadirin conference, petinggi
+                  siber, dan dewan juri.</span>
+              </li>
+            </ul>
+            <p class="terminal-label">[ BENEFIT LEVEL: ELITE ADVANCEMENT ]</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="w-full bg-[#ff2025] overflow-hidden">
+      <div class="container">
+        <div class="grid grid-cols-1 md:min-h-[390px] md:grid-cols-[40%_60%] lg:grid-cols-[45%_55%]">
+          <div class="relative h-[330px] md:h-auto">
+            <img src="assets/indonesian-soldier.png" alt=""
+              class="absolute top-0 bottom-0 left-[-10vw] h-full w-[calc(100%_+_20vw)] max-w-none origin-top object-cover object-top"
+              loading="lazy" decoding="async" width="1414" height="906" />
+            <div class="absolute top-0 bottom-0 left-[-10vw] w-[calc(100%_+_20vw)] bg-[#5c0306]/25" aria-hidden="true">
+            </div>
+            <div
+              class="absolute top-0 bottom-0 left-[-10vw] w-[20vw] bg-linear-to-r from-[#ff2025] from-20% via-[#ff2025]/60 via-55% to-transparent"
+              aria-hidden="true"></div>
+            <div
+              class="absolute inset-y-0 right-0 w-[42%] bg-linear-to-r from-transparent via-[#ef1418]/60 to-[#ef1418]"
+              aria-hidden="true"></div>
+            <p
+              class="golden-ticket absolute top-[73%] left-[38%] flex h-[52px] w-[210px] -translate-x-1/2 items-center justify-center py-0 text-[13px] tracking-[0.06em] shadow-[0_0_24px_6px_rgba(90,4,8,0.6)] md:h-[58px] md:w-[240px] md:text-[15px]">
+              GOLDEN TICKET BINTARA<br />JALUR EKSKLUSIF
+            </p>
+          </div>
+          <div
+            class="relative z-10 flex flex-col justify-center bg-linear-to-r from-[#ef1418] to-[#ff2529] px-5 pt-10 pb-12 md:pt-14 md:pr-[6%] md:pb-16 md:pl-[17%]">
+            <h2 class="mb-2.5 text-white">
+              Jalur Menuju Bintara Siber TNI AD
+            </h2>
+            <p class="mb-6 text-[15px] leading-[1.65] text-white/80 md:text-base">
+              Diferensiasi prestisius program kolaborasi PUSSIBERAD dan
+              CODEPOLITAN.
+            </p>
+            <p class="max-w-[670px] text-[15px] leading-[1.5] text-white md:text-base">
+              Seluruh anggota tim Juara 1, 2, dan 3 berhak atas jalur
+              rekomendasi untuk mengikuti Seleksi Bintara Siber TNI AD. Ini
+              adalah jalur eksklusif yang hanya tersedia melalui program ini.
+            </p>
+            <p class="mt-3.5 max-w-[670px] text-[15px] leading-[1.5] text-white md:text-base">
+              Golden Ticket bukan rekrutmen otomatis. Pemegang tetap harus
+              memenuhi persyaratan (umur, status, kesehatan) dan melewati
+              seluruh tahapan seleksi resmi. Proses seleksi diselenggarakan
+              dalam sesi khusus tersendiri, memberikan waktu bagi pemenang
+              untuk mempersiapkan diri secara optimal.
+            </p>
+            <p
+              class="mt-4 max-w-[600px] font-mono text-[11px] leading-[1.5] tracking-[0.02em] text-white/90 md:text-sm">
+              * Golden Ticket bersifat personal dan tidak dapat dialihkan.
+              Keputusan akhir ada pada Panitia Seleksi Bintara Siber TNI AD.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="kategori" class="section categories">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">// EMPAT KATEGORI</p>
+          <h2>Pilih kategori yang paling cocok dengan skill kamu.</h2>
+          <p class="intro">
+            Contoh di bawah hanya gambaran. Kamu bebas membangun apa saja:
+            software, dashboard, bot, framework, selama relevan dengan
+            kategori dan memanfaatkan AI.
+          </p>
+        </div>
+        <div class="two-column grid md:grid-cols-2 gap-8">
+          <article class="category-card panel tone-red">
+            <div class="flex justify-between items-center gap-4">
+              <span class="category-number">01</span><span class="tag">OFFENSIVE TECH</span>
+            </div>
+            <h3>Penindakan</h3>
+            <p>
+              Solusi ofensif untuk pengujian kerentanan sistem atau mendukung
+              operasi siber aktif.
+            </p>
+            <div class="category-tags flex flex-wrap gap-3">
+              <span>Vulnerability Exploitation Tool</span><span>Payload Generator</span><span>Malware
+                Sandbox</span><span>Red Team Automation</span><span>AI Target Profiling</span>
+            </div>
+          </article>
+          <article class="category-card panel tone-sage">
+            <div class="flex justify-between items-center gap-4">
+              <span class="category-number">02</span><span class="tag">DEFENSIVE SHIELD</span>
+            </div>
+            <h3>Penangkalan</h3>
+            <p>
+              Teknologi untuk mendeteksi, mencegah, dan merespons ancaman
+              siber sebelum atau saat terjadi.
+            </p>
+            <div class="category-tags flex flex-wrap gap-3">
+              <span>Smart IDS/IPS berbasis AI</span><span>Threat Intelligence Platform</span><span>Automated Incident
+                Response</span><span>Encryption Tool</span><span>Zero-Day Detection</span>
+            </div>
+          </article>
+          <article class="category-card panel tone-bronze">
+            <div class="flex justify-between items-center gap-4">
+              <span class="category-number">03</span><span class="tag">CORE INFRA</span>
+            </div>
+            <h3>Dukungan Teknologi</h3>
+            <p>
+              Infrastruktur, platform, atau tooling yang mendukung operasi
+              siber satuan secara menyeluruh.
+            </p>
+            <div class="category-tags flex flex-wrap gap-3">
+              <span>Command Dashboard</span><span>SIEM Ringan</span><span>Digital Forensic Toolkit</span><span>Secure
+                Communication</span><span>Asset Management</span>
+            </div>
+          </article>
+          <article class="category-card panel tone-green">
+            <div class="flex justify-between items-center gap-4">
+              <span class="category-number">04</span><span class="tag">COGNITIVE DOMAIN</span>
+            </div>
+            <h3>Siber Sosial</h3>
+            <p>
+              Pemantauan dan analisis ruang siber sosial: deteksi
+              disinformasi, propaganda, buzzer, dan opini publik.
+            </p>
+            <div class="category-tags flex flex-wrap gap-3">
+              <span>Buzzer Detection</span><span>Hoax Classifier AI</span><span>Sentiment Dashboard</span><span>Social
+                Network Analysis</span><span>Early Warning Viral</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section competition">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">// FORMAT KOMPETISI</p>
+          <h2>Dua fase: online 4 minggu, lalu final di Jakarta.</h2>
+        </div>
+        <div class="two-column grid md:grid-cols-2 gap-8">
+          <article class="phase-card panel">
+            <span class="tag">FASE 1 — ONLINE, 4 MINGGU</span>
+            <h3>Penyisihan Mandiri &amp; Asinkronus</h3>
+            <p>
+              Daftar tim 2-4 orang melalui platform CODEPOLITAN. Tim yang
+              disetujui langsung bisa mulai kerjakan solusi, tanpa harus
+              menunggu jadwal serentak.
+            </p>
+            <div class="technical-box font-mono">
+              <p>ITEM YANG WAJIB DISUBMIT:</p>
+              <ul>
+                <li>
+                  <span class="text-red-500">&gt;</span> Proposal Solusi
+                  Sistematis
+                </li>
+                <li>
+                  <span class="text-red-500">&gt;</span> Dokumentasi Teknis
+                  dan Blueprint
+                </li>
+                <li>
+                  <span class="text-red-500">&gt;</span> Video Demo Purwarupa
+                  (Working Demo)
+                </li>
+              </ul>
+            </div>
+            <p class="phase-note">
+              Bonus: Akses 2 webinar pembekalan teknis gratis selama masa
+              pengerjaan.
+            </p>
+          </article>
+          <article class="phase-card panel">
+            <span class="tag">FASE 2 — OFFLINE, 10 NOVEMBER 2026</span>
+            <h3>Final Stage di NTV Nusantara Jakarta</h3>
+            <p>
+              10 tim dengan submission terbaik diundang presentasi langsung di
+              NTV Nusantara, Jakarta, dalam rangkaian agung Kartika Cyber
+              Conference.
+            </p>
+            <div class="technical-box font-mono">
+              <p>SPESIFIKASI SESI FINAL:</p>
+              <ul>
+                <li>
+                  <span class="text-red-500">&gt;</span> 10 menit presentasi
+                  intensif dan live demo per tim
+                </li>
+                <li>
+                  <span class="text-red-500">&gt;</span> Dinilai langsung oleh
+                  dewan juri ahli militer &amp; industri
+                </li>
+                <li>
+                  <span class="text-red-500">&gt;</span> Disaksikan ratusan
+                  peserta conference &amp; praktisi
+                </li>
+              </ul>
+            </div>
+            <p class="phase-note">
+              Pemenang diumumkan dan menerima penghargaan di hari yang sama.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="hadiah" class="section prizes">
+      <div class="container">
+        <div class="prize-intro grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <div class="section-heading">
+              <p class="eyebrow">// HADIAH DAN PENGHARGAAN</p>
+              <h2>Total hadiah</h2>
+            </div>
+            <p class="total-prize">Rp 100.700.000</p>
+          </div>
+          <p>
+            Golden Ticket bukan rekrutmen otomatis. Pemegang tetap harus
+            memenuhi persyaratan (umur, status, kesehatan) dan melewati
+            seluruh tahapan seleksi resmi. Proses seleksi diselenggarakan
+            dalam sesi khusus tersendiri, memberikan waktu bagi pemenang untuk
+            mempersiapkan diri secara optimal.
+          </p>
+        </div>
+        <div class="podiums grid md:grid-cols-3 gap-8 items-end">
+          <article class="prize-card prize-gold">
+            <h3>Juara 1</h3>
+            <p class="prize-amount">Rp 20.000.000</p>
+            <p class="prize-caption">UANG TUNAI PEMBINAAN PENUH</p>
+            <ul class="checklist space-y-4">
+              <li>
+                <i class="fa-solid fa-circle-check check-icon" aria-hidden="true"></i>
+                <span>Plakat Kehormatan Resmi</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check check-icon" aria-hidden="true"></i>
+                <span>Membership CODEPOLITAN 1 thn (senilai Rp 1.200.000)</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check check-icon" aria-hidden="true"></i>
+                <span>Bootcamp Ethical Hacking 8x sesi (senilai Rp
+                  1.200.000)</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check check-icon" aria-hidden="true"></i>
+                <span>Sertifikat Digital Juara Resmi</span>
+              </li>
+            </ul>
+            <p class="golden-ticket">
+              GOLDEN TICKET BINTARA<br />JALUR EKSKLUSIF
+            </p>
+          </article>
+          <article class="prize-card prize-silver">
+            <h3>Juara 2</h3>
+            <p class="prize-amount text-white">Rp 12.500.000</p>
+            <p class="prize-caption">UANG TUNAI PEMBINAAN</p>
+            <ul class="checklist space-y-4">
+              <li>
+                <i class="fa-solid fa-circle-check check-icon" aria-hidden="true"></i>
+                <span>Plakat Kehormatan Resmi</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check check-icon" aria-hidden="true"></i>
+                <span>Membership CODEPOLITAN 1 thn (senilai Rp 1.200.000)</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check check-icon" aria-hidden="true"></i>
+                <span>Bootcamp Ethical Hacking 8x sesi (senilai Rp
+                  1.200.000)</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check check-icon" aria-hidden="true"></i>
+                <span>Sertifikat Digital Juara Resmi</span>
+              </li>
+            </ul>
+            <p class="golden-ticket">
+              GOLDEN TICKET BINTARA<br />JALUR EKSKLUSIF
+            </p>
+          </article>
+          <article class="prize-card prize-bronze">
+            <h3>Juara 3</h3>
+            <p class="prize-amount">Rp 7.500.000</p>
+            <p class="prize-caption">UANG TUNAI PEMBINAAN</p>
+            <ul class="checklist space-y-4">
+              <li>
+                <i class="fa-solid fa-circle-check check-icon" aria-hidden="true"></i>
+                <span>Plakat Kehormatan Resmi</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check check-icon" aria-hidden="true"></i>
+                <span>Membership CODEPOLITAN 1 thn (senilai Rp 1.200.000)</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check check-icon" aria-hidden="true"></i>
+                <span>Bootcamp Ethical Hacking 8x sesi (senilai Rp
+                  1.200.000)</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check check-icon" aria-hidden="true"></i>
+                <span>Sertifikat Digital Juara Resmi</span>
+              </li>
+            </ul>
+            <p class="golden-ticket">
+              GOLDEN TICKET BINTARA<br />JALUR EKSKLUSIF
+            </p>
+          </article>
+        </div>
+        <aside class="prize-notes panel flex flex-wrap items-center justify-between gap-6">
+          <div>
+            <p>
+              • Hadiah non-tunai (Membership CODEPOLITAN &amp; Bootcamp
+              Ethical Hacking) merupakan kontribusi langsung CODEPOLITAN.
+            </p>
+            <p>
+              • Seluruh peserta yang berhasil submit karya mendapatkan
+              sertifikat digital resmi dari CODEPOLITAN dan PUSSIBERAD.
+            </p>
+          </div>
+          <span class="tag">GARANSI VERIFIKASI RESMI</span>
+        </aside>
+      </div>
+    </section>
+    <section class="section keynote">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">// KEYNOTE SPEAKER</p>
+          <h2>Belajar langsung dari praktisi AI kelas dunia.</h2>
+        </div>
+        <article class="keynote-card panel grid md:grid-cols-[312px_1fr] gap-10">
+          <div class="keynote-photo">
+            <img src="assets/sofian.png" alt="Sofian Hadiwijaya — keynote speaker" loading="lazy" decoding="async"
+              width="128" height="127" />
+          </div>
+          <div class="keynote-copy">
+            <p class="eyebrow">KEYNOTE SESSION // MAIN STAGE</p>
+            <h3>Sofian Hadiwijaya</h3>
+            <p class="speaker-role">
+              Applied AI Product Leader | Forbes 30 Under 30 Asia
+            </p>
+            <p>
+              Berpengalaman lebih dari 18 tahun di industri teknologi,
+              fintech, dan startup. Fokus pada Enterprise AI Deployment, GenAI
+              Agents, dan Digital Banking. Menjadi salah satu figur yang
+              diakui Forbes sebagai pemimpin muda paling berpengaruh di Asia.
+            </p>
+            <div class="keynote-topic">
+              <div>
+                <p class="tiny-label">TOPIK KEYNOTE RESMI</p>
+                <p class="topic-title">
+                  &quot;Pemanfaatan AI dalam dunia nyata: dari industri ke
+                  pertahanan siber&quot;
+                </p>
+              </div>
+              <span class="tag">45 MENIT + Q&amp;A</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="section talkshow">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">// TALKSHOW PANEL</p>
+          <h2>
+            Diskusi terbuka bersama praktisi keamanan siber dan teknologi.
+          </h2>
+          <p class="intro">
+            Sesi talkshow menghadirkan 3 narasumber dari berbagai latar
+            belakang untuk berdiskusi tentang tantangan dan peluang di dunia
+            keamanan siber Indonesia. Dipandu oleh seorang moderator, sesi ini
+            dirancang interaktif selama 60 menit dengan ruang tanya jawab
+            langsung dari peserta.
+          </p>
+        </div>
+        <div class="three-column grid md:grid-cols-3 gap-8">
+          <article class="speaker-card panel">
+            <div class="speaker-photo">
+              <img src="assets/onno.png" alt="Onno W. Purbo" loading="lazy" decoding="async" width="383"
+                height="199" /><span class="photo-badge">NARASUMBER TALKSHOW</span>
+            </div>
+            <div class="speaker-copy">
+              <h3>Onno W. Purbo</h3>
+              <p class="speaker-role">
+                Rector, Institut Teknologi Tangerang Selatan (ITTS)
+              </p>
+              <p>
+                Salah satu tokoh internet Indonesia yang dikenal luas atas
+                kontribusinya dalam pengembangan infrastruktur jaringan,
+                open-source, dan edukasi teknologi informasi di Indonesia.
+              </p>
+              <p class="tiny-label theme-label">
+                KEY THEME: INFRASTRUKTUR &amp; EDUKASI
+              </p>
+            </div>
+          </article>
+          <article class="speaker-card panel">
+            <div class="speaker-photo">
+              <img src="assets/mahrus.png" alt="Mahrus Qusaeri" loading="lazy" decoding="async" width="156"
+                height="81" /><span class="photo-badge">NARASUMBER TALKSHOW</span>
+            </div>
+            <div class="speaker-copy">
+              <h3>Mahrus Qusaeri</h3>
+              <p class="speaker-role">
+                Cybersecurity Consultant | Mentor JagoanSiber
+              </p>
+              <p>
+                Praktisi keamanan siber dengan rekam jejak di berbagai proyek
+                keamanan kritis korporat dan institusi pemerintah. Aktif
+                mencetak talenta di Bootcamp Ethical Hacking JagoanSiber.
+              </p>
+              <p class="tiny-label theme-label">
+                KEY THEME: OFFENSIVE &amp; PRACTICAL DEFENSE
+              </p>
+            </div>
+          </article>
+          <article class="speaker-card panel">
+            <div class="speaker-photo">
+              <img src="assets/tobeconfirmed.png" alt="Pimpinan PUSSIBERAD" loading="lazy" decoding="async" width="156"
+                height="81" /><span class="photo-badge">NARASUMBER TALKSHOW</span>
+            </div>
+            <div class="speaker-copy">
+              <h3>Pimpinan PUSSIBERAD</h3>
+              <p class="speaker-role">Akan diumumkan Segera</p>
+              <p>
+                Perwakilan pejabat komando dan perumus strategi pertahanan
+                siber dari Pusat Siber Angkatan Darat (PUSSIBERAD) untuk
+                memaparkan doktrin siber militer terkini.
+              </p>
+              <p class="tiny-label theme-label">
+                KEY THEME: DOKTRIN PERTAHANAN NEGARA
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section criteria">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">// KRITERIA PENILAIAN</p>
+          <h2>Yang dinilai dewan juri dari solusi kamu.</h2>
+          <p class="intro">
+            Penilaian transparan, terukur, dan menitikberatkan pada kesiapan
+            sistem fungsional.
+          </p>
+        </div>
+        <div class="criteria-grid grid md:grid-cols-6 gap-8">
+          <article class="criterion panel md:col-span-2">
+            <div class="flex gap-5 items-center">
+              <div class="score" style="--score: 25">
+                <span>25<small>persen</small></span>
+              </div>
+              <h3>Relevansi dan manfaat bagi pengamanan IT/OT TNI AD</h3>
+            </div>
+            <p>
+              Kesesuaian masalah dengan spektrum pertahanan kedaulatan digital
+              dan infrastruktur militer.
+            </p>
+          </article>
+          <article class="criterion panel md:col-span-2">
+            <div class="flex gap-5 items-center">
+              <div class="score" style="--score: 25">
+                <span>25<small>persen</small></span>
+              </div>
+              <h3>Inovasi teknis berbasis AI</h3>
+            </div>
+            <p>
+              Pemanfaatan model machine learning, LLM, atau agen cerdas yang
+              solutif bukan sekadar gimmick.
+            </p>
+          </article>
+          <article class="criterion panel md:col-span-2">
+            <div class="flex gap-5 items-center">
+              <div class="score" style="--score: 25">
+                <span>25<small>persen</small></span>
+              </div>
+              <h3>Fungsionalitas purwarupa (Working Demo)</h3>
+            </div>
+            <p>
+              Sistem dapat dijalankan secara nyata, dites secara live saat
+              presentasi, dan minim mockup statis.
+            </p>
+          </article>
+          <article class="criterion panel md:col-span-2">
+            <div class="flex gap-5 items-center">
+              <div class="score" style="--score: 15">
+                <span>15<small>persen</small></span>
+              </div>
+              <h3>Kelayakan implementasi lanjutan</h3>
+            </div>
+            <p>
+              Arsitektur terukur, efisiensi resource komputasi, dan
+              kompatibilitas sistem operasional.
+            </p>
+          </article>
+          <article class="criterion panel md:col-span-2">
+            <div class="flex gap-5 items-center">
+              <div class="score" style="--score: 10">
+                <span>10<small>persen</small></span>
+              </div>
+              <h3>Kualitas dokumentasi teknis &amp; blueprint</h3>
+            </div>
+            <p>
+              Kejelasan panduan instalasi, dokumentasi API/schema, dan
+              kerapian repositori kode.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="timeline" class="section timeline-section">
+      <div class="container">
+        <div class="section-heading text-center mx-auto">
+          <p class="eyebrow">// TIMELINE KEGIATAN</p>
+          <h2>8 minggu dari pendaftaran sampai pengumuman pemenang.</h2>
+        </div>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <article class="panel">
+              <p class="timeline-date">PEMBUKAAN (1 OKTOBER 2026)</p>
+              <h3>Persiapan &amp; Pembukaan Pendaftaran</h3>
+              <p>
+                Publikasi pembukaan pendaftaran nasional tim via platform
+                CODEPOLITAN.
+              </p>
+            </article>
+          </li>
+          <li class="timeline-item">
+            <article class="panel">
+              <p class="timeline-date">WEBINAR I (7 Oktober 2026)</p>
+              <h3>Periode Pengerjaan Solusi (Online)</h3>
+              <p>
+                Peserta mengerjakan sistem purwarupa AI secara asinkronus
+                bersama tim. Termasuk penyelenggaraan Webinar Pembekalan 2
+                pada Minggu ke-3/4.
+              </p>
+            </article>
+          </li>
+          <li class="timeline-item">
+            <article class="panel">
+              <p class="timeline-date">WEBINAR II (14 OKTOBER 2026)</p>
+              <h3>WEBINAR KEDUA</h3>
+              <p>
+                Portal submission ditutup. Dewan juri memulai review online
+                atas seluruh proposal, kode, dan video demo yang masuk.
+              </p>
+            </article>
+          </li>
+          <li class="timeline-item">
+            <article class="panel">
+              <p class="timeline-date">PENUTUPAN (31 OKTOBER 2026)</p>
+              <h3>Batas Akhir Submission &amp; Penjurian Tahap 1</h3>
+              <p>
+                Portal submission ditutup. Dewan juri memulai review online
+                atas seluruh proposal, kode, dan video demo yang masuk.
+              </p>
+            </article>
+          </li>
+          <li class="timeline-item">
+            <article class="panel">
+              <p class="timeline-date">PENJURIAN (3 NOVEMBER 2026)</p>
+              <h3>Babak Penyisihan</h3>
+              <p>
+                Babak pamungkas live pitch 10 finalis di hadapan pimpinan
+                PUSSIBERAD, Keynote session Sofian Hadiwijaya, talkshow, dan
+                penganugerahan piala &amp; Golden Ticket.
+              </p>
+            </article>
+          </li>
+          <li class="timeline-item">
+            <article class="panel">
+              <p class="timeline-date">7 NOVEMBER 2026</p>
+              <h3>Conference &amp; Grand Final di NTV Nusantara</h3>
+              <p>
+                Babak pamungkas live pitch 10 finalis di hadapan pimpinan
+                PUSSIBERAD, Keynote session Sofian Hadiwijaya, talkshow, dan
+                penganugerahan piala &amp; Golden Ticket.
+              </p>
+            </article>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section id="cara-daftar" class="section registration">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">// CARA DAFTAR</p>
+          <h2>Lima langkah untuk mulai ikut hackathon ini.</h2>
+          <p class="intro">
+            Pendaftaran gratis. Terbuka untuk seluruh Indonesia.
+          </p>
+        </div>
+        <ol class="steps grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <li class="step">
+            <span class="step-number">01</span>
+            <h3>Bentuk Tim</h3>
+            <p>
+              Bentuk tim beranggotakan 2 hingga 4 orang (developer, pentester,
+              AI engineer, atau sipil/TNI).
+            </p>
+            <p class="tiny-label">TEAM SETUP</p>
+          </li>
+          <li class="step">
+            <span class="step-number">02</span>
+            <h3>Akses Domain</h3>
+            <p>
+              Kunjungi situs resmi di kartikacyberhackathon.id dan pilih
+              pendaftaran akun tim.
+            </p>
+            <p class="tiny-label">PORTAL ACCESS</p>
+          </li>
+          <li class="step">
+            <span class="step-number">03</span>
+            <h3>Lampirkan Ide</h3>
+            <p>
+              Daftar tim dan unggah ringkasan proposal ide solusi sesuai salah
+              satu dari 4 kategori.
+            </p>
+            <p class="tiny-label">IDEA INTAKE</p>
+          </li>
+          <li class="step">
+            <span class="step-number">04</span>
+            <h3>Kerjakan Solusi</h3>
+            <p>
+              Begitu tim diverifikasi, langsung kembangkan prototype secara
+              mandiri selama 4 pekan.
+            </p>
+            <p class="tiny-label">BUILD SPRINT</p>
+          </li>
+          <li class="step">
+            <span class="step-number">05</span>
+            <h3>Submit Karya</h3>
+            <p>
+              Unggah proposal final, blueprint arsitektur, dan video demo
+              sebelum batas waktu ditutup.
+            </p>
+            <p class="tiny-label">SUBMIT & REVIEW</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-panel panel text-center">
+          <h2>Punya ide untuk pertahanan siber Indonesia?</h2>
+          <p>
+            Bentuk tim kamu sekarang dan mulai bangun solusinya. Pendaftaran
+            gratis, hanya butuh beberapa menit untuk mengamankan langkah
+            awalmu menuju NTV Nusantara dan Bintara Siber TNI AD.
+          </p>
+          <a class="button" href="https://kartikacyberhackathon.id" target="_blank" rel="noopener noreferrer">DAFTAR
+            SEKARANG JUGA<span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+    <section id="faq" class="section faq">
+      <div class="container">
+        <div class="section-heading text-center mx-auto">
+          <p class="eyebrow">// PERTANYAAN UMUM</p>
+          <h2>Yang sering ditanyakan calon peserta.</h2>
+        </div>
+        <div class="faq-list mx-auto">
+          <details class="faq-item panel" open>
+            <summary>
+              Apakah pendaftaran berbayar?<span aria-hidden="true" class="faq-indicator"></span>
+            </summary>
+            <div class="faq-answer">
+              Tidak. Pendaftaran 100% gratis tanpa dipungut biaya apa pun dan
+              terbuka untuk seluruh talenta di seluruh wilayah Indonesia.
+            </div>
+          </details>
+          <details class="faq-item panel">
+            <summary>
+              Apakah harus punya latar belakang militer?<span aria-hidden="true" class="faq-indicator"></span>
+            </summary>
+            <div class="faq-answer">
+              Tidak. Program terbuka untuk developer, programmer, mahasiswa,
+              dan praktisi keamanan siber, baik sipil maupun TNI AD.
+            </div>
+          </details>
+          <details class="faq-item panel">
+            <summary>
+              Apakah Golden Ticket berarti otomatis diterima jadi TNI AD?<span aria-hidden="true"
+                class="faq-indicator"></span>
+            </summary>
+            <div class="faq-answer">
+              Golden Ticket bukan rekrutmen otomatis. Pemegang tetap harus
+              memenuhi persyaratan (umur, status, kesehatan) dan melewati
+              seluruh tahapan seleksi resmi. Proses seleksi diselenggarakan
+              dalam sesi khusus tersendiri, memberikan waktu bagi pemenang
+              untuk mempersiapkan diri secara optimal.
+            </div>
+          </details>
+          <details class="faq-item panel">
+            <summary>
+              Apakah solusi harus berupa perangkat keras (hardware)?<span aria-hidden="true"
+                class="faq-indicator"></span>
+            </summary>
+            <div class="faq-answer">
+              Tidak harus. Kamu dapat membuat software, dashboard, bot,
+              framework, atau tooling, selama relevan dengan salah satu
+              kategori dan memanfaatkan AI.
+            </div>
+          </details>
+          <details class="faq-item panel">
+            <summary>
+              Apakah harus seorang ahli spesialis keamanan siber?<span aria-hidden="true" class="faq-indicator"></span>
+            </summary>
+            <div class="faq-answer">
+              Kamu tidak perlu latar belakang militer. Bawa kemampuan coding
+              dan ide kamu, lalu pilih kategori yang paling sesuai dengan
+              kemampuan tim.
+            </div>
+          </details>
+          <details class="faq-item panel">
+            <summary>
+              Bagaimana jika tim saya kurang dari 2 orang atau lebih dari 4
+              orang?<span aria-hidden="true" class="faq-indicator"></span>
+            </summary>
+            <div class="faq-answer">
+              Komposisi tim pada desain adalah 2–4 orang. Lengkapi atau
+              sesuaikan anggota tim sebelum melakukan pendaftaran.
+            </div>
+          </details>
+          <details class="faq-item panel">
+            <summary>
+              Apakah peserta dari luar Jakarta bisa ikut babak final?<span aria-hidden="true"
+                class="faq-indicator"></span>
+            </summary>
+            <div class="faq-answer">
+              Pendaftaran terbuka untuk seluruh Indonesia. Sepuluh tim terbaik
+              diundang mengikuti final secara langsung di Jakarta. Detail
+              akomodasi tidak dicantumkan dalam desain; periksa informasi
+              resmi penyelenggara.
+            </div>
+          </details>
+          <details class="faq-item panel">
+            <summary>
+              Apa yang terjadi dengan prototype setelah hackathon
+              selesai?<span aria-hidden="true" class="faq-indicator"></span>
+            </summary>
+            <div class="faq-answer">
+              Karya berpotensi diadopsi dan dikembangkan oleh TNI AD.
+              Ketentuan hak cipta, lisensi, dan kerja sama lanjutan perlu
+              merujuk pada aturan resmi penyelenggara.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="sponsor-bar">
+      <div class="container flex flex-wrap items-center">
+        <p>Disponsori oleh</p>
+        <div class="sponsor-logos">
+          <img src="assets/sws.png" alt="SWS" class="sponsor-logo-square" loading="lazy" decoding="async" width="256"
+            height="192" />
+          <img src="assets/vitech.png" alt="Vitech Asia" loading="lazy" decoding="async" width="606" height="112" />
+          <img src="assets/gmc.png" alt="GMC" loading="lazy" decoding="async" width="275" height="128" />
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container flex flex-wrap justify-between items-end gap-6">
+        <p>
+          Diselenggarakan oleh Pusat Siber Angkatan Darat (PUSSIBERAD) bersama
+          PT Codepolitan Integrasi Indonesia.
+        </p>
+        <p>© 2026 Kartika Cyber Hackathon.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
