@@ -494,6 +494,13 @@
   .category-card.tone-green::after {
     background-image: url("assets/cells.png");
   }
+  /* The atom and cells line art reads heavier than the confetti/lock artwork, so
+     those two cards get a smaller corner box. The box keeps the shared
+     752/488 aspect ratio, so the drawing scales down uniformly with the width. */
+  .category-card.tone-bronze::after,
+  .category-card.tone-green::after {
+    width: min(60%, 285px);
+  }
   .category-card > * {
     position: relative;
     z-index: 1;
