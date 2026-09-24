@@ -26,7 +26,8 @@
   }
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 24px;
+    /* Clears the sticky header so in-page anchors land below it. */
+    scroll-padding-top: 104px;
   }
   body {
     margin: 0;
@@ -180,12 +181,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 24px;
     min-height: 45px;
     padding: 10px 22px;
     border: 1px solid #ffffff33;
     border-radius: 999px;
-    background: linear-gradient(100deg, #820e0e, #f02c2c);
+    background: var(--red);
     font-weight: 700;
     line-height: 1.35;
     color: #fff;
@@ -194,26 +194,8 @@
       transform 0.18s;
   }
   .button:hover {
-    filter: brightness(1.2);
+    filter: brightness(1.15);
     transform: translateY(-2px);
-  }
-  .button span {
-    font-size: 21px;
-    line-height: 1;
-  }
-  /* Circular badge for an icon inside a button (hero CTA arrow). Font Awesome
-     owns `display` and `line-height` on its own elements, so the glyph is
-     centred through FA's own `--fa-display` knob instead of a wrapper. */
-  .button-icon {
-    --fa-display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: #000;
-    font-size: 12px;
   }
   .text-link {
     display: inline-flex;
@@ -240,6 +222,8 @@
   /* Hero: staggered title and original Figma artwork. */
   .hero {
     position: relative;
+    display: flex;
+    align-items: center;
     min-height: 732px;
     overflow: hidden;
     background: #08110d;
@@ -253,102 +237,111 @@
     object-position: center top;
   }
   .site-header {
-    position: relative;
-    z-index: 2;
-    height: 148px;
-    background: linear-gradient(#0b171650, transparent);
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: #fff;
+    border-bottom: 1px solid #e6e8eb;
   }
   .header-inner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
     width: min(1210px, calc(100% - 64px));
-    height: 101px;
-    position: relative;
-  }
-  .brand {
-    font-family: "Source Sans 3", Arial, sans-serif;
-    font-weight: 600;
-    font-size: 16px;
+    margin-inline: auto;
+    padding-block: 14px;
   }
   .brand-emblem {
-    position: absolute;
-    left: 50%;
-    top: 17px;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 113px;
+    flex-shrink: 0;
+    width: 44px;
+    height: 48px;
   }
   .brand-emblem img {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
+  .site-nav {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    margin-left: auto;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .site-nav a:not(.button) {
+    color: #10161d;
+    white-space: nowrap;
+  }
+  .site-nav a:not(.button):hover {
+    color: var(--red);
+  }
+  /* The CTA is the last item of `.site-nav` (desktop: inline after the links,
+     mobile: inside the dropdown panel) and is deliberately compact. */
   .header-cta {
-    font-size: 16px;
-    min-width: 225px;
-    letter-spacing: 0.5px;
+    flex-shrink: 0;
+    min-height: 38px;
+    padding: 8px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+  }
+  /* Hamburger button: hidden above the mobile breakpoint, where the links sit
+     inline instead. Font Awesome owns `display` on its elements through
+     `--fa-display`, so the icon is swapped with that knob, not `display`. */
+  .site-nav-toggle {
+    display: none;
+  }
+  .site-nav-toggle .icon-close {
+    --fa-display: none;
+  }
+  .site-nav-toggle[aria-expanded="true"] .icon-menu {
+    --fa-display: none;
+  }
+  .site-nav-toggle[aria-expanded="true"] .icon-close {
+    --fa-display: inline-block;
   }
   .hero-content {
     position: relative;
     width: min(1100px, calc(100% - 64px));
-    padding-top: 145px;
-    padding-bottom: 66px;
+    margin-inline: auto;
+    padding-block: 40px;
+    text-align: center;
   }
   .hero-kicker {
+    display: inline-block;
+    padding: 7px 18px;
+    border: 2px solid #ffffff66;
+    border-radius: 999px;
     font:
-      600 20px/1.4 "Source Sans 3",
+      600 16px/1.35 "Source Sans 3",
       Arial,
       sans-serif;
-    color: var(--gold);
-    margin-bottom: 12px;
+    letter-spacing: 0.3px;
+    color: #fff;
+    margin-bottom: 28px;
   }
   .hero h1 {
     font-family: "Cousine", "Courier New", monospace;
-    font-weight: 400;
-    font-size: clamp(56px, 6.945vw, 100px);
-    line-height: 1.05;
-    letter-spacing: -2.8px;
+    font-weight: 700;
+    font-size: clamp(28px, 3.9vw, 52px);
+    line-height: 1.24;
+    letter-spacing: -1px;
     color: white;
+    text-wrap: balance;
   }
-  .hero-first {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    white-space: nowrap;
-  }
-  .hero-stars {
-    display: flex;
-    justify-content: space-between;
-    width: 24%;
-    height: 34px;
-    font-size: 34px;
-    line-height: 1;
-    color: red;
-  }
-  .hero-second {
-    display: block;
-    margin-top: 5px;
-    margin-left: 23.5%;
-    white-space: nowrap;
-  }
-  .hero-symbol {
-    position: absolute;
-    left: 0;
-    top: 300px;
-    width: 196px;
-    height: 81px;
-    object-fit: contain;
-  }
-  .hero-copy {
-    margin-left: 23.5%;
-    margin-top: 14px;
-  }
-  .hero-copy p {
+  .hero-description {
+    max-width: 760px;
+    margin: 22px auto 0;
     font-family: "Source Sans 3", Arial, sans-serif;
     font-size: 17px;
     line-height: 1.6;
     color: #d9ded8;
   }
   .hero-actions {
-    margin-top: 27px;
+    justify-content: center;
+    margin-top: 30px;
     gap: 24px;
     font-family: "Source Sans 3", Arial, sans-serif;
     font-size: 18px;
@@ -378,6 +371,31 @@
     width: auto;
     height: 48px;
   }
+  /* Intro band right below the organizer bar: logo left, statement right. */
+  .why-layout {
+    align-items: center;
+    gap: 64px;
+  }
+  .why-media {
+    display: flex;
+    justify-content: center;
+  }
+  .why-media img {
+    width: min(100%, 224px);
+    height: auto;
+  }
+  .why-copy h2 {
+    max-width: 620px;
+  }
+  .why-copy p {
+    max-width: 660px;
+    margin-top: 20px;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  .why-copy .button {
+    margin-top: 30px;
+  }
   /* Program and golden ticket */
   .about {
     padding-top: 100px;
@@ -403,6 +421,23 @@
     height: 12px;
     border-left: 2px solid var(--red);
     border-top: 2px solid var(--red);
+  }
+  /* These two cards are the only light surfaces on the page: white panel and
+     dark grey copy, so the benefit list stands out instead of blending into
+     the dark page. Scoped to `.about` because `.panel` is shared. */
+  .about .benefit-card {
+    background: #fff;
+    border-color: #e3e6ea;
+    color: #4a525c;
+  }
+  .about .benefit-card h3 {
+    color: #14181d;
+  }
+  .about .benefit-card .checklist li {
+    color: #4a525c;
+  }
+  .about .benefit-card .tag {
+    background: #f02c2c1a;
   }
   /* The benefit icons have no colour rule of their own, so they take the accent
      directly; every other accent on the page comes from --gold / --green. */
@@ -439,15 +474,6 @@
     font-size: 15px;
     line-height: 1;
     color: var(--gold);
-  }
-  .terminal-label {
-    border-top: 1px solid var(--line);
-    padding-top: 25px;
-    margin-top: 32px;
-    font:
-      14px/1.5 "IBM Plex Mono",
-      monospace;
-    overflow-wrap: anywhere;
   }
   /* Categories */
   .categories {
@@ -1176,35 +1202,19 @@
     }
   }
   @media (max-width: 1100px) {
-    .hero h1 {
-      font-size: 6.8vw;
-    }
-    .hero-content {
-      padding-top: 130px;
-    }
-    .hero-symbol {
-      width: 17%;
-      top: 265px;
-    }
-    .hero-stars {
-      height: 27px;
-      font-size: 27px;
-    }
-    .hero-copy {
-      margin-top: 25px;
-    }
-    .hero-copy p {
+    .hero-description {
       font-size: 16px;
     }
     .hero {
       min-height: 690px;
     }
     .header-cta {
-      min-width: 190px;
-      font-size: 14px;
+      min-height: 36px;
+      padding: 7px 14px;
+      font-size: 12px;
     }
-    .brand {
-      max-width: 210px;
+    .site-nav {
+      gap: 24px;
       font-size: 14px;
     }
     .benefit-card {
@@ -1327,95 +1337,115 @@
       grid-template-columns: minmax(0, 1fr);
       gap: 22px;
     }
+    .why-layout {
+      gap: 32px;
+    }
+    .why-media img {
+      width: min(100%, 170px);
+    }
+    .why-copy h2 {
+      max-width: none;
+    }
+    .why-copy p {
+      font-size: 15px;
+      line-height: 1.6;
+      margin-top: 16px;
+    }
+    .why-copy .button {
+      margin-top: 24px;
+    }
     .hero {
-      min-height: 690px;
+      min-height: 560px;
     }
     .hero-backdrop {
       object-position: 54% top;
     }
-    .site-header {
-      height: 134px;
-    }
     .header-inner {
+      gap: 12px;
       width: calc(100% - 32px);
-      height: 79px;
-      align-items: center;
-      gap: 10px;
-    }
-    .brand {
-      flex: 1;
-      min-width: 0;
-      max-width: none;
-      font-size: 11px;
-      line-height: 1.4;
+      padding-block: 10px;
     }
     .brand-emblem {
-      position: static;
-      transform: none;
-      flex-shrink: 0;
-      width: 36px;
-      height: 42px;
+      width: 34px;
+      height: 38px;
+    }
+    /* The links collapse into a dropdown anchored under the bar, opened by
+       `main.js` through the `.is-open` class on `.site-nav`. */
+    .site-nav {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      display: none;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      margin-left: 0;
+      padding-inline: 16px;
+      background: #fff;
+      border-bottom: 1px solid #e6e8eb;
+      box-shadow: 0 20px 32px -20px #0a0e1366;
+      font-size: 15px;
+    }
+    .site-nav.is-open {
+      display: flex;
+    }
+    .site-nav a:not(.button) {
+      padding-block: 14px;
+    }
+    /* Separator between the links only: the CTA below must keep its own border. */
+    .site-nav a:not(.button) + a:not(.button) {
+      border-top: 1px solid #e6e8eb;
     }
     .button.header-cta {
-      min-width: 0;
-      min-height: 34px;
-      font-size: 10px;
-      padding: 8px 11px;
-      gap: 8px;
+      align-self: stretch;
+      margin: 16px 0 18px;
+      min-height: 40px;
+      padding: 10px 18px;
+      font-size: 13px;
+      letter-spacing: 0.3px;
     }
-    .header-cta span {
-      font-size: 14px;
+    .site-nav-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-left: auto;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      color: #10161d;
+      font-size: 16px;
+      line-height: 1;
+      cursor: pointer;
     }
     .hero-content {
       width: calc(100% - 40px);
-      padding-top: 115px;
-      padding-bottom: 50px;
+      padding-block: 40px;
     }
     .hero-kicker {
-      font-size: 14px;
-      margin-bottom: 19px;
+      padding: 6px 14px;
+      font-size: 13px;
+      margin-bottom: 20px;
     }
     .hero h1 {
-      font-size: clamp(29px, 7.35vw, 56px);
-      letter-spacing: -1.3px;
-      line-height: 1.16;
+      font-size: clamp(24px, 6.4vw, 34px);
     }
-    .hero-first {
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .hero-stars {
-      position: absolute;
-      top: 78px;
-      right: 0;
-      width: 130px;
-      height: 18px;
-      font-size: 18px;
-    }
-    .hero-second {
-      margin-left: 0;
-      margin-top: 7px;
-    }
-    .hero-symbol {
-      display: none;
-    }
-    .hero-copy {
-      margin-left: 0;
-      margin-top: 25px;
-      max-width: 590px;
-    }
-    .hero-copy p {
+    .hero-description {
       font-size: 15px;
       line-height: 1.55;
-      margin-bottom: 10px;
+      margin-top: 18px;
     }
     .hero-actions {
       gap: 18px;
       font-size: 15px;
-      margin-top: 28px;
+      margin-top: 26px;
     }
     .hero-actions .button {
-      min-width: 180px;
+      min-width: 0;
     }
     .button {
       padding: 11px 17px;
@@ -1454,11 +1484,6 @@
     .checklist li {
       font-size: 15px;
       gap: 12px;
-    }
-    .terminal-label {
-      font-size: 11px;
-      padding-top: 22px;
-      margin-top: 24px;
     }
     .category-card {
       padding: 25px;
@@ -1715,22 +1740,25 @@
   }
   @media (max-width: 380px) {
     .hero-actions {
-      align-items: flex-start;
+      align-items: center;
       flex-direction: column;
       gap: 16px;
     }
     .hero {
-      min-height: 730px;
+      min-height: 520px;
     }
     .brand-emblem {
-      width: 32px;
-      height: 37px;
+      width: 30px;
+      height: 34px;
     }
-    .brand {
-      font-size: 10px;
+    .site-nav-toggle {
+      width: 36px;
+      height: 36px;
+      font-size: 15px;
     }
-    .header-cta {
-      display: none;
+    .button.header-cta {
+      font-size: 12px;
+      padding: 9px 14px;
     }
     .prize-amount {
       font-size: 27px;
