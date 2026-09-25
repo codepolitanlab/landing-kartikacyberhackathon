@@ -1020,14 +1020,6 @@
     color: #dfe3d4;
     transform: rotate(90deg);
   }
-  .score small {
-    font:
-      500 10px/1.4 "IBM Plex Mono",
-      monospace;
-    letter-spacing: 1px;
-    margin-top: 4px;
-    color: var(--muted);
-  }
   .timeline-section {
     background:
       radial-gradient(ellipse at 0% 15%, #4a1a1a40, transparent 55%),
@@ -1369,6 +1361,26 @@
     }
     .speaker-copy {
       padding-inline: 17px;
+    }
+  }
+  /* Tablet: steps follow the criteria grid — 3 per row, last two centred */
+  @media (min-width: 768px) and (max-width: 1100px) {
+    .steps {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 26px;
+    }
+    .step {
+      grid-column: span 2;
+      padding: 24px 20px;
+    }
+    .step:nth-child(4) {
+      grid-column: 2 / span 2;
+    }
+    .step h3 {
+      font-size: 18px;
+    }
+    .step > p:not(.tiny-label) {
+      font-size: 13px;
     }
   }
   @media (max-width: 767px) {
@@ -1714,14 +1726,11 @@
       font-size: 14px;
     }
     .steps {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: 1fr;
       gap: 15px;
     }
     .step {
       padding: 22px 17px;
-    }
-    .step:last-child {
-      grid-column: 1/-1;
     }
     .step-number {
       margin-bottom: 20px;
@@ -1814,12 +1823,6 @@
     .button.header-cta {
       font-size: 12px;
       padding: 9px 14px;
-    }
-    .steps {
-      grid-template-columns: 1fr;
-    }
-    .step:last-child {
-      grid-column: auto;
     }
     .criterion > .flex {
       gap: 15px;
