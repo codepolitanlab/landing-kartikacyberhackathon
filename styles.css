@@ -1050,11 +1050,8 @@
     top: 26px;
     width: 13px;
     height: 13px;
-    background: var(--canvas);
-    border: 2px solid var(--sage);
-  }
-  .timeline-item:nth-child(n + 4)::before {
-    border-color: var(--green);
+    border-radius: 50%;
+    background: var(--red);
   }
   .timeline-item article {
     padding: 22px 25px;
@@ -1083,15 +1080,9 @@
   .registration .section-heading {
     margin-bottom: 32px;
   }
-  .registration .intro {
-    margin-top: 12px;
-    font-family: "IBM Plex Mono", monospace;
-    font-size: 13px;
-    color: var(--sage);
-  }
   .steps {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 26px;
     list-style: none;
     margin: 0;
@@ -1115,17 +1106,74 @@
     font-size: 18px;
     margin-bottom: 12px;
   }
-  .step > p:not(.tiny-label) {
+  .step > p {
     font-size: 13px;
     line-height: 1.6;
     overflow-wrap: anywhere;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
   }
-  .step .tiny-label {
+  /* Arrow marker at the foot of the card reads as "next step"; the final step
+     has none because the flow ends there. It is decoration, not a control, so
+     it has no hover state. */
+  .step-arrow {
+    align-self: flex-end;
     margin-top: auto;
-    border-top: 1px solid var(--line);
-    padding-top: 15px;
-    font-size: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--line);
+    color: var(--green);
+    font-size: 13px;
+    line-height: 1;
+  }
+  /* The last step is where the flow lands, so it carries the accent colour. */
+  .step-final {
+    border-color: var(--green);
+    background:
+      linear-gradient(160deg, #f02c2c52, #090e13 60%),
+      #090e13;
+    box-shadow:
+      0 0 0 1px #f02c2c66,
+      0 18px 42px -26px #f02c2ccc;
+  }
+  .step-final .step-number {
+    color: var(--ink);
+  }
+  .step-checklist {
+    gap: 10px;
+    margin-top: 4px;
+    font-size: 13px;
+  }
+  .step-final .check-icon {
+    color: var(--ink);
+    margin-top: 2px;
+  }
+  .registration-note {
+    margin: 46px auto 0;
+    max-width: 720px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .registration-note a {
+    color: var(--green);
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  .registration-note a:hover {
+    color: var(--ink);
+  }
+  .registration-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 26px;
+  }
+  .registration-cta .button {
+    min-width: 340px;
+    font-size: 15px;
+    letter-spacing: 0.8px;
   }
   .cta-section {
     padding-block: 84px 50px;
@@ -1347,7 +1395,7 @@
     .step h3 {
       font-size: 16px;
     }
-    .step > p:not(.tiny-label) {
+    .step > p {
       font-size: 12px;
     }
     .organizer-logos img {
@@ -1363,23 +1411,19 @@
       padding-inline: 17px;
     }
   }
-  /* Tablet: steps follow the criteria grid — 3 per row, last two centred */
+  /* Tablet: the four steps fall into a 2×2 grid */
   @media (min-width: 768px) and (max-width: 1100px) {
     .steps {
-      grid-template-columns: repeat(6, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 26px;
     }
     .step {
-      grid-column: span 2;
       padding: 24px 20px;
-    }
-    .step:nth-child(4) {
-      grid-column: 2 / span 2;
     }
     .step h3 {
       font-size: 18px;
     }
-    .step > p:not(.tiny-label) {
+    .step > p {
       font-size: 13px;
     }
   }
@@ -1739,8 +1783,16 @@
     .step h3 {
       font-size: 18px;
     }
-    .step > p:not(.tiny-label) {
+    .step > p {
       font-size: 13px;
+    }
+    .registration-note {
+      margin-top: 34px;
+      font-size: 14px;
+    }
+    .registration-cta .button {
+      min-width: 0;
+      width: 100%;
     }
     .cta-panel {
       padding: 38px 22px;
