@@ -480,22 +480,17 @@
     padding-bottom: 116px;
     background: radial-gradient(ellipse at 0% 50%, #4a1a1a17, transparent 50%);
   }
+  /* White surface, like the benefit cards above. The corner artwork is kept:
+     its ink is grey, so on white it reads as a faint light texture. */
   .category-card {
     padding: 30px 33px;
     position: relative;
     overflow: hidden;
     min-height: 346px;
     --tone: var(--red);
-    background:
-      /* thin white glow in the top-left corner */
-      radial-gradient(60% 45% at 0% 0%, #ffffff1a, transparent 70%),
-      /* larger red glow in the bottom-right corner */
-        radial-gradient(
-          120% 100% at 100% 100%,
-          color-mix(in srgb, var(--tone) 32%, transparent),
-          transparent 72%
-        ),
-      var(--panel);
+    background: #fff;
+    border-color: #e3e6ea;
+    color: #4a525c;
   }
   /* Confetti overlay in the bottom-right corner — sits above the red glow but
      below the card content (children are lifted with z-index below). */
@@ -553,70 +548,150 @@
   }
   .category-card .tag {
     color: var(--tone);
+    background: #f02c2c1a;
     font-size: 12px;
   }
+  /* Dark copy on the white card, same greys as the benefit cards. */
   .category-card h3 {
     margin-top: 26px;
     margin-bottom: 8px;
+    color: #14181d;
   }
   .category-card > p {
     line-height: 1.5;
     min-height: 48px;
+    color: #4a525c;
+  }
+  /* Divider line + CONTOH label between the description and the example chips. */
+  .category-examples {
+    margin-top: 20px;
+    padding-top: 17px;
+    border-top: 1px solid #e3e6ea;
+  }
+  .category-examples-label {
+    margin-bottom: 12px;
+    font:
+      500 11px/1.4 "IBM Plex Mono",
+      monospace;
+    letter-spacing: 1.2px;
+    color: #7b838d;
   }
   .category-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    padding-top: 17px;
-    margin-top: 20px;
-    border-top: 1px solid var(--line);
   }
   .category-tags span {
     padding: 6px 10px;
-    border: 1px solid #ffffff12;
-    background: #10161de6;
+    border: 1px solid #e3e6ea;
+    background: #f4f5f7;
     font:
       12px/1.5 "IBM Plex Mono",
       monospace;
-    color: #c8ced0;
+    color: #4a525c;
   }
   .competition {
     padding-top: 72px;
     border-top: 1px solid #262f3940;
     background: var(--canvas) url("assets/bg-format.png") center/cover no-repeat;
   }
+  /* Both phase cards are light surfaces, like the category/benefit cards. */
   .phase-card {
     padding: 32px;
+    background: #fff;
+    border-color: #e3e6ea;
+    color: #4a525c;
+  }
+  .phase-card .tag {
+    background: #f02c2c1a;
+  }
+  /* Tag row: label left, corner icon (BABAK 1 uses the globe) right. */
+  .phase-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .phase-icon {
+    font-size: 22px;
+    color: var(--red);
   }
   .phase-card h3 {
     margin: 23px 0 13px;
+    color: #14181d;
   }
   .phase-card > p {
     line-height: 1.6;
+    color: #4a525c;
+  }
+  /* Small line under the card title, e.g. "4 minggu pengerjaan". */
+  .phase-card > .phase-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    font:
+      12px/1.4 "IBM Plex Mono",
+      monospace;
+    color: #7b838d;
+  }
+  .phase-card > .phase-meta > i {
+    font-size: 13px;
+    color: var(--red);
+  }
+  .phase-address {
+    margin-top: 18px;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 1.6;
+    color: #4a525c;
+  }
+  .phase-address a {
+    color: var(--red);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .phase-address a:hover {
+    color: #b81f1f;
   }
   .technical-box {
-    background: #0b1117;
+    background: #f4f5f7;
+    border: 1px solid #e3e6ea;
     padding: 22px 17px;
     margin-top: 22px;
     font:
       13px/1.75 "IBM Plex Mono",
       monospace;
-    color: #a4acb5;
+    color: #4a525c;
   }
   .technical-box p {
     font-size: 12px;
-    margin-bottom: 7px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #14181d;
   }
   .technical-box ul {
-    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    padding-left: 0;
     margin: 0;
   }
-  .phase-card .phase-note {
-    font:
-      12px/1.7 "IBM Plex Mono",
-      monospace;
-    color: var(--gold);
-    margin-top: 20px;
+  /* Font Awesome icons replace the old ">" list bullets. */
+  .technical-box li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .technical-box li i {
+    /* Fixed-width icon column: the glyphs differ in width (microphone 10px,
+       laptop 16px…), so without this every line's text starts at its own x. */
+    flex: 0 0 18px;
+    width: 18px;
+    margin-top: 4px;
+    font-size: 13px;
+    text-align: center;
+    color: var(--red);
   }
   /* Rewards */
   .prizes {
@@ -638,6 +713,8 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 32px;
+    /* Podium: Juara 1 is the tallest card, so the other two sit on the bottom. */
+    align-items: end;
   }
   .prize-card {
     position: relative;
@@ -670,6 +747,8 @@
   }
   .prize-card.prize-gold {
     background: linear-gradient(145deg, #514c25, #202419 67%);
+    /* Two classes so this beats the `.prize-card` padding in the media queries. */
+    padding: 46px 34px;
   }
   .prize-card.prize-bronze {
     background: linear-gradient(145deg, #574a3c, #24201c 65%);
@@ -681,6 +760,18 @@
   }
   .prize-gold h3 {
     font-size: 36px;
+  }
+  /* Juara 1 is deliberately one size up from Juara 2 and 3. */
+  .prize-card.prize-gold h3 {
+    font-size: 40px;
+  }
+  .prize-card.prize-gold .prize-trophy {
+    width: 76px;
+    height: 76px;
+    font-size: 32px;
+  }
+  .prize-card.prize-gold .checklist li {
+    font-size: 18px;
   }
   /* Trophy badge above each winner name; the metal colour is set per card. */
   .prize-trophy {
@@ -725,16 +816,25 @@
       monospace;
     border: 1px solid #f7db5a;
   }
-  /* Golden Ticket footnote: red block so it reads as a caveat, not fine print. */
+  /* Golden Ticket footnote: light block so it reads as a caveat, not fine print. */
   .prize-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
     margin-top: 26px;
     padding: 24px 32px;
-    background: var(--red);
+    background: #fff;
+    color: #3f4650;
     font-size: 15px;
     line-height: 1.65;
   }
+  .prize-note > i {
+    margin-top: 3px;
+    font-size: 19px;
+    color: #3f4650;
+  }
   .prize-note p {
-    color: #fff;
+    color: #3f4650;
   }
   /* Keynote and panel */
   .keynote {
@@ -1143,11 +1243,16 @@
     letter-spacing: 1px;
   }
   .sponsor-bar .container {
-    gap: 0;
-    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
   }
   .sponsor-logos {
-    display: contents;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
   }
   .sponsor-logos img {
     width: auto;
@@ -1492,9 +1597,20 @@
     .prize-card {
       padding: 28px;
     }
+    .prize-card.prize-gold {
+      padding: 34px 28px;
+    }
     .prize-card h3,
     .prize-gold h3 {
       font-size: 29px;
+    }
+    .prize-card.prize-gold h3 {
+      font-size: 34px;
+    }
+    .prize-card.prize-gold .prize-trophy {
+      width: 64px;
+      height: 64px;
+      font-size: 27px;
     }
     .prize-trophy {
       width: 54px;
@@ -1654,8 +1770,10 @@
       gap: 17px;
     }
     .sponsor-bar p {
-      flex-basis: 100%;
       font-size: 12px;
+    }
+    .sponsor-logos {
+      gap: 17px;
     }
     .sponsor-logos img {
       flex-shrink: 0;
