@@ -1073,6 +1073,38 @@
     font-size: 15px;
     line-height: 1.6;
   }
+  /* Acara final: highlight cards, same light surface as the benefit/phase
+     cards so the icon + copy pair reads clearly against the dark page. */
+  .final-day {
+    padding-top: 72px;
+  }
+  .final-day .section-heading {
+    margin-bottom: 46px;
+  }
+  .final-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+  .final-card {
+    padding: 32px;
+    background: #fff;
+    border-color: #e3e6ea;
+    color: #4a525c;
+  }
+  .final-icon {
+    font-size: 26px;
+    line-height: 1;
+    color: var(--red);
+  }
+  .final-card h3 {
+    margin: 20px 0 12px;
+    font-size: 20px;
+    color: #14181d;
+  }
+  .final-card > p {
+    line-height: 1.6;
+  }
   .registration {
     background: #10161d;
     padding-block: 62px 82px;
@@ -1187,15 +1219,21 @@
     position: relative;
     overflow: hidden;
     padding: 58px 28px 64px;
-    background:
-      radial-gradient(ellipse at center, #4a1a1a40, transparent 70%),
-      var(--panel);
+    /* The closing call to action is the only light surface in the lower half
+       of the page, so it stands out from the dark sections around it. */
+    background: #f7f4ee;
+    border-color: #e3e6ea;
+    color: #4a525c;
+  }
+  .cta-panel .eyebrow {
+    margin-bottom: 18px;
   }
   .cta-panel h2 {
     max-width: 730px;
     margin: auto;
     font-size: 50px;
     line-height: 1.1;
+    color: #14181d;
   }
   .cta-panel > p {
     max-width: 535px;
@@ -1272,17 +1310,59 @@
     line-height: 1.6;
     color: var(--muted);
   }
-  .sponsor-bar {
+  .faq-answer a {
+    color: var(--red);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  /* Support box that closes the FAQ list: copy left, button right. */
+  .whatsapp-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    max-width: 770px;
+    margin: 40px auto 0;
+    padding: 28px 32px;
+    background: #f4f5f7;
+    border-color: #e3e6ea;
+    color: #4a525c;
+  }
+  .whatsapp-copy {
+    /* Headline and description are one block; the button is the only other
+       child of the box, so the copy always sits left of it. */
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .whatsapp-box h3 {
+    font-size: 22px;
+    color: #14181d;
+  }
+  .whatsapp-copy > p {
+    margin-top: 8px;
+    line-height: 1.6;
+  }
+  .whatsapp-box .button {
+    flex: 0 0 auto;
+    gap: 10px;
+    border-color: #25d366;
+    background: #25d366;
+    color: #08160d;
+  }
+  .sponsor-bar,
+  .partner-bar {
     padding: 28px 0 40px;
   }
-  .sponsor-bar p {
+  .sponsor-bar p,
+  .partner-bar p {
     font:
       15px/1.5 "IBM Plex Mono",
       monospace;
     color: var(--ink);
     letter-spacing: 1px;
   }
-  .sponsor-bar .container {
+  .sponsor-bar .container,
+  .partner-bar .container {
     flex-direction: column;
     gap: 24px;
     justify-content: center;
@@ -1769,6 +1849,29 @@
     .timeline-item article > p:last-child {
       font-size: 14px;
     }
+    .final-day {
+      padding-top: 56px;
+    }
+    .final-day .section-heading {
+      margin-bottom: 30px;
+    }
+    .final-grid {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+    .final-card {
+      padding: 22px 20px;
+    }
+    .final-icon {
+      font-size: 22px;
+    }
+    .final-card h3 {
+      margin: 16px 0 10px;
+      font-size: 18px;
+    }
+    .final-card > p {
+      font-size: 14px;
+    }
     .steps {
       grid-template-columns: 1fr;
       gap: 15px;
@@ -1823,14 +1926,34 @@
       margin-inline: 18px;
       padding-block: 18px;
     }
-    .sponsor-bar {
+    .whatsapp-box {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 28px;
+      padding: 24px 20px;
+      gap: 20px;
+    }
+    .whatsapp-box h3 {
+      font-size: 19px;
+    }
+    .whatsapp-copy > p {
+      font-size: 14px;
+    }
+    .whatsapp-box .button {
+      min-width: 0;
+      width: 100%;
+    }
+    .sponsor-bar,
+    .partner-bar {
       padding: 10px 0 30px;
     }
-    .sponsor-bar .container {
+    .sponsor-bar .container,
+    .partner-bar .container {
       justify-content: center;
       gap: 17px;
     }
-    .sponsor-bar p {
+    .sponsor-bar p,
+    .partner-bar p {
       font-size: 12px;
     }
     .sponsor-logos {
