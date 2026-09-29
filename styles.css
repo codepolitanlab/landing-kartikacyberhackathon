@@ -329,6 +329,7 @@
     line-height: 1.24;
     letter-spacing: -1px;
     color: white;
+    text-transform: uppercase;
     text-wrap: balance;
   }
   .hero-description {
