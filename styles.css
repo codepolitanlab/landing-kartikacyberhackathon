@@ -1388,6 +1388,16 @@
     width: auto;
     height: 48px;
   }
+  /* Clickable media-coverage logos: the anchor is the flex item so the gap
+     between logos stays even and the hover state covers the whole mark. */
+  .sponsor-logos .sponsor-logo-link {
+    display: flex;
+    align-items: center;
+    transition: opacity 0.2s ease;
+  }
+  .sponsor-logos .sponsor-logo-link:hover {
+    opacity: 0.75;
+  }
   /* The SWS mark is almost square, so at the shared height it reads far smaller
    than the two wide wordmarks; it needs the extra height the design gave it. */
   .sponsor-logos .sponsor-logo-square {
