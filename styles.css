@@ -1403,6 +1403,15 @@
   .sponsor-logos .sponsor-logo-square {
     height: 72px;
   }
+  /* The Jawa Pos file is a 2172x724 canvas whose wordmark only fills the
+     middle 173px (~24% of the height), so at the shared 48px box its ink
+     renders barely 12px tall. The class scales the box up and cancels the
+     extra height with negative block margins, so the wordmark grows without
+     changing the 48px flex line. */
+  .sponsor-logos .sponsor-logo-jawapos {
+    height: 80px;
+    margin-block: -16px;
+  }
   .footer-bottom {
     padding: 40px 0;
     background: #10161d;
@@ -1980,6 +1989,11 @@
     .sponsor-logos {
       gap: 17px;
     }
+    /* The media row carries one extra logo than the sponsor row, so the
+       slightly larger Jawa Pos mark needs a tighter gap to stay on one row. */
+    .media-partner .sponsor-logos {
+      gap: 12px;
+    }
     .sponsor-logos img {
       flex-shrink: 0;
       width: auto;
@@ -1987,6 +2001,10 @@
     }
     .sponsor-logos .sponsor-logo-square {
       height: 42px;
+    }
+    .sponsor-logos .sponsor-logo-jawapos {
+      height: 40px;
+      margin-block: -6px;
     }
     .footer-bottom {
       padding: 28px 0;
