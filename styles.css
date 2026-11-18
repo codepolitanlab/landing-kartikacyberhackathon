@@ -1384,6 +1384,15 @@
     justify-content: center;
     gap: 32px;
   }
+  /* The sponsor row is split into two balanced rows so the stacked DST mark
+     does not end up alone on its own line. The row gap is larger than the
+     logo gap because the stacked marks overflow their 48px flex line. */
+  .sponsor-logos-rows {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+  }
   .sponsor-logos img {
     width: auto;
     height: 48px;
@@ -1989,6 +1998,16 @@
     }
     .sponsor-logos {
       gap: 17px;
+    }
+    /* On phones the two rows would leave DST alone on a third line, so the
+       rows flatten back into a single wrapping flex run. */
+    .sponsor-logos-rows {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 17px;
+    }
+    .sponsor-logos-rows .sponsor-logos {
+      display: contents;
     }
     /* The media row carries one extra logo than the sponsor row, so the
        slightly larger Jawa Pos mark needs a tighter gap to stay on one row. */
